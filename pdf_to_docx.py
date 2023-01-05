@@ -63,7 +63,8 @@ def convert_pdf_to_docx(filename: str) -> str:
         word_document.add_paragraph(extracted_text)
         word_document.add_page_break()
     # filename is passed with .pdf at the end, so it changes extension to .docx
-    word_document.save(f'./output/{filename.replace(".pdf", ".docx")}')
+    filename = filename.replace(".pdf", ".docx")
+    word_document.save(f'./output/{filename}')
     return filename
 
 
