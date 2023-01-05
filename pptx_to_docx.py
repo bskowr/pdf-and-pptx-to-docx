@@ -11,9 +11,6 @@ import docx
 from docx.shared import Cm
 import pathlib
 
-# change this path if Tesseract is installed in different directory
-pytesseract.pytesseract.tesseract_cmd = r"E:\\TesseractOCR\\tesseract.exe"
-
 
 def get_text_from_photo(media_path, media_name, word_document, lang_set: str = "pol"):
     """

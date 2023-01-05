@@ -7,9 +7,6 @@ from PIL import Image
 import pytesseract
 import docx
 
-# change this path if Tesseract is installed in different directory
-pytesseract.pytesseract.tesseract_cmd = r"E:\\TesseractOCR\\tesseract.exe"
-
 
 def get_text_from_image(image: Image, lang_set="pol") -> str:
     """
