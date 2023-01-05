@@ -82,9 +82,9 @@ def convert_from_directory(directory: str) -> List[str]:
         if not file.match("*.pdf"):
             continue
         filepath = str(file).replace(  # convert to str and cut out additional "input\" added by pathlib
-                                "input\\", "",
-                                1
-                            )
+            "input\\", "",
+            1
+        )
         created_file = convert_pdf_to_docx(filepath)
         file_list.append(created_file)
     return file_list
@@ -121,6 +121,9 @@ if __name__ == '__main__':
                       f"Lista plikow:")
                 for index, result_filename in enumerate(output_file_list):
                     print(f"{index}\t|\t{result_filename}")
+            case "3":
+                print("Podaj sciezke do tesseract.exe")
+                pytesseract.pytesseract.tesseract_cmd = input()
             case "0":
                 break
             case _:

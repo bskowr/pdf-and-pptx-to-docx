@@ -187,6 +187,7 @@ if __name__ == '__main__':
         print("PPTX to DOCX\n"
               "[1] - konwertuj plik PPTX\n"
               "[2] - konwertuj wszystkie pliki w folderze\n"
+              "[3] - ustaw sciezke do TesseractOCR"
               "[0] - wyjdz z programu\n"
               "Wybierz rodzaj czynnosci: ")
         action = input()
@@ -209,6 +210,9 @@ if __name__ == '__main__':
                       f"Lista plikow:")
                 for index, result_filename in enumerate(output_file_list):
                     print(f"{index}\t|\t{result_filename}")
+            case "3":
+                print("Podaj sciezke do tesseract.exe")
+                pytesseract.pytesseract.tesseract_cmd = input()
             case "0":
                 break
             case _:
